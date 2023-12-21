@@ -1,15 +1,15 @@
 import { users } from "../data"
-import { personalTab, personalTable } from "../elements"
+import { personalTab, usersTable } from "../elements"
 import { getId } from "../idState"
-import { resetTabStyles, setTabStyle, showTable } from "../utils"
+import { hideButton, resetTabStyles, setTabStyle } from "../utils"
 
 export const personalPage = () => {
     resetTabStyles()
     const id = getId()
     if(id){
         setTabStyle(personalTab)
-        showTable(personalTable)
-        personalTable.innerHTML = `
+        hideButton()
+        usersTable.innerHTML = `
             <tr>
                 <th>Name</th>
                 <th>Address</th>
@@ -23,7 +23,7 @@ export const personalPage = () => {
             <td>${user.personal.address}</td>
             <td>${user.personal.mobile}</td>
         `;
-        personalTable.appendChild(newRow)
+        usersTable.appendChild(newRow)
     }
 }
 

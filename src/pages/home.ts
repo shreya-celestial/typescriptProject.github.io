@@ -1,10 +1,11 @@
 import { homeHeading, tabsDiv, usersTable } from "../elements"
-import { showTable,handleNameClick } from "../utils"
+import { handleNameClick, hideButton } from "../utils"
 import { users, user } from "../data"
 import { setId } from "../idState"
 
 export const homePage = () => {
     setId(undefined)
+    hideButton();
     tabsDiv.style.display='';
     homeHeading.style.display='';
     usersTable.innerHTML = `
@@ -14,7 +15,6 @@ export const homePage = () => {
             <th>Occupation</th>
         </tr>
     `;
-    showTable(usersTable)
     users.map((user: user):void=>{
         const newRow = document.createElement('tr');
         newRow.innerHTML = `

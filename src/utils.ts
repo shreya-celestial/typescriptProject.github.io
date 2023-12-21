@@ -1,4 +1,4 @@
-import { tableDiv,hiddenDiv, tabsDiv, homeHeading } from "./elements"
+import { tabsDiv, homeHeading, usersEmploymentButton } from "./elements"
 import { setId } from "./idState";
 import { personalPage } from "./pages/personal";
 
@@ -25,21 +25,10 @@ export const setTabStyle = (
     tab.style.color = 'white'
 }
 
-export const showTable = (
-    table1:HTMLTableElement,
-    button1?: HTMLButtonElement
-) => {
-    if(tableDiv.firstChild){
-        hiddenDiv.appendChild(tableDiv.firstChild)
-    }
-    //below condition to check if button already exists
-    if(tableDiv.firstChild)
-    {
-        hiddenDiv.appendChild(tableDiv.firstChild)
-    }
-    tableDiv.appendChild(table1)
-    if(button1)
-    {
-        tableDiv.appendChild(button1)
-    }
+export const showButton = () => {
+    usersEmploymentButton.style.display='block'
+}
+
+export const hideButton = () => {
+    usersEmploymentButton.style.display='none'
 }

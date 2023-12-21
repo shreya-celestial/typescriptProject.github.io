@@ -1,7 +1,7 @@
 import { users } from "../data";
-import { employmentTab, employmentTable, usersEmploymentButton } from "../elements";
+import { employmentTab, usersTable } from "../elements";
 import { getId } from "../idState";
-import { resetTabStyles, setTabStyle, showTable } from "../utils"
+import { resetTabStyles, setTabStyle, showButton } from "../utils"
 
 export const employmentPage = () => {
     resetTabStyles();
@@ -9,8 +9,8 @@ export const employmentPage = () => {
     if(id)
     {
         setTabStyle(employmentTab)
-        showTable(employmentTable,usersEmploymentButton)
-        employmentTable.innerHTML = `
+        showButton()
+        usersTable.innerHTML = `
             <tr>
                 <th>Current Company</th>
             </tr>
@@ -20,6 +20,6 @@ export const employmentPage = () => {
         newRow.innerHTML = `
             <td>${user.employment.currentCompany}</td>
         `;
-        employmentTable.appendChild(newRow)
+        usersTable.appendChild(newRow)
     }
 }

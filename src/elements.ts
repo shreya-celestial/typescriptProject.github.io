@@ -7,14 +7,7 @@ export const employmentTab = document.getElementById('employment')! as HTMLParag
 
 export const homeHeading = document.querySelector('h3')! as HTMLHeadingElement
 export const tableDiv = document.querySelector('div.table')! as HTMLDivElement;
-export const hiddenDiv = document.querySelector('div.hidden')! as HTMLDivElement;
-
 export const usersTable = document.getElementById('userData')! as HTMLTableElement;
-export const personalTable = document.getElementById('personalData')! as HTMLTableElement;
-export const professionalTable = document.getElementById('professionalData')! as HTMLTableElement;
-export const academicTable = document.getElementById('academicData')! as HTMLTableElement;
-export const employmentTable = document.getElementById('employmentData')! as HTMLTableElement;
-export const usersEmploymentTable = document.getElementById('usersEmployment')! as HTMLTableElement;
 export const usersEmploymentButton = document.querySelector('button')! as HTMLButtonElement
 
 

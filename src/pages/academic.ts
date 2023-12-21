@@ -1,7 +1,7 @@
 import { users } from "../data";
-import { academicTab, academicTable } from "../elements";
+import { academicTab, usersTable } from "../elements";
 import { getId } from "../idState";
-import { resetTabStyles, setTabStyle, showTable } from "../utils"
+import { hideButton, resetTabStyles, setTabStyle } from "../utils"
 
 export const academicPage = () => {
     resetTabStyles();
@@ -9,8 +9,8 @@ export const academicPage = () => {
     if(id)
     {
         setTabStyle(academicTab)
-        showTable(academicTable)
-        academicTable.innerHTML = `
+        hideButton()
+        usersTable.innerHTML = `
             <tr>
                 <th>College Name</th>
                 <th>Degree</th>
@@ -26,6 +26,6 @@ export const academicPage = () => {
             <td>${user.academic.passoutyear}</td>
             <td>${user.academic.addressCollege}</td>
         `;
-        academicTable.appendChild(newRow)
+        usersTable.appendChild(newRow)
     }
 }

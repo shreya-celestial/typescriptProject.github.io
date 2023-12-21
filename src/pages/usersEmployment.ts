@@ -1,10 +1,10 @@
 import { user, users } from "../data"
-import { usersEmploymentTable } from "../elements"
-import { showTable } from "../utils"
+import { usersTable } from "../elements"
+import { hideButton } from "../utils";
 
 export const usersEmploymentPage = () => {
-    showTable(usersEmploymentTable)
-    usersEmploymentTable.innerHTML = `
+    hideButton()
+    usersTable.innerHTML = `
         <tr>
             <th>Name</th>
             <th>Company Name</th>
@@ -16,6 +16,6 @@ export const usersEmploymentPage = () => {
             <td>${user.name}</td>
             <td>${user.employment.currentCompany}</td>
         `;
-        usersEmploymentTable.appendChild(newRow)
+        usersTable.appendChild(newRow)
     })
 }
